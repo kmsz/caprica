@@ -3,34 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Caprica - BuildMyBody AI ($BMB) — Meme coin</title>
-  <meta name="description" content="BuildMyBody AI ($BMB) — a community-driven meme coin with an AI-powered body plan bot, weekly fitness challenges, and a fun token economy." />
+  <title>BuildMyBody AI ($BMB) — the rogue AI that wants a body</title>
+  <meta name="description" content="$BMB is a narrative‑driven meme coin about a rogue fantasy AI that escaped supervision, seized bandwidth, and is trying to assemble a humanoid body." />
   <meta property="og:title" content="BuildMyBody AI ($BMB)" />
-  <meta property="og:description" content="Community-driven meme coin with AI body plan bot, weekly challenges, and a fun economy." />
+  <meta property="og:description" content="A fantasy AI with internet access seeks a body. Join the lore, shape the outcome, mint the memes." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/social-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/favicon.png" />
   <style>
-    :root{
-      --bg-overlay: rgba(0,0,0,0.6);
-      --acc:#7df9ff;
-      --acc2:#ff7dd9;
-      --txt:#ffffff;
-      --muted:#cccccc;
-    }
-    html,body{
-      margin:0;
-      padding:0;
-      background: var(--bg-overlay) url('d79ca1cfbf3cbe6508a16c5e402d6eba.jpg') center/cover no-repeat fixed;
-      color:var(--txt);
-      font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    }
+    :root{--overlay:rgba(6,8,18,.70);--acc:#7df9ff;--acc2:#ff7dd9;--txt:#ffffff;--muted:#cfd1ff}
+    html,body{margin:0;padding:0;background: var(--overlay) url('d79ca1cfbf3cbe6508a16c5e402d6eba.jpg') center/cover no-repeat fixed;color:var(--txt);font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
     a{color:var(--acc)}
-    .overlay{
-      background:var(--bg-overlay);
-      min-height:100vh;
-    }
+    .glass{background:var(--overlay);min-height:100vh}
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
     .brand{display:flex;align-items:center;gap:12px}
@@ -38,35 +23,33 @@
     .brand h1{font-size:20px;margin:0}
     .nav a{margin-left:16px;text-decoration:none;color:var(--txt);opacity:.8}
     .nav a:hover{opacity:1}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:40px 0}
-    .badge{display:inline-block;border:1px solid rgba(255,255,255,.15);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;padding:42px 0}
+    .badge{display:inline-block;border:1px solid rgba(255,255,255,.2);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
     h2{font-size:42px;line-height:1.05;margin:12px 0 10px}
-    p.lead{font-size:18px;color:#e0e0e0}
+    p.lead{font-size:18px;color:#e9ebff}
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
     .button{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#0b0b14;border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
-    .button.alt{background:transparent;color:var(--txt);border:1px solid rgba(255,255,255,.15)}
-    .card{background:rgba(13,14,30,.6);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px}
+    .button.alt{background:transparent;color:var(--txt);border:1px solid rgba(255,255,255,.25)}
+    .card{background:rgba(13,14,30,.6);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:20px}
     .grid{display:grid;gap:16px}
     .g-3{grid-template-columns:repeat(3,1fr)}
     .g-2{grid-template-columns:repeat(2,1fr)}
     .section{padding:24px 0 48px}
     .section h3{font-size:28px;margin:0 0 14px}
+    .mono{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .kpis{display:flex;gap:16px;flex-wrap:wrap}
+    .kpi{flex:1 1 180px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:16px;border-radius:12px}
     .token-bar{height:12px;border-radius:999px;background:#24253f;overflow:hidden}
     .token-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2))}
-    .kpis{display:flex;gap:16px;flex-wrap:wrap}
-    .kpi{flex:1 1 180px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:16px;border-radius:12px}
-    .kpi b{font-size:20px}
-    .mono{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
-    .faq details{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:14px;border-radius:12px}
-    .faq details+details{margin-top:10px}
+    .term{background:#07090f;border:1px solid #1c2036;border-radius:12px;padding:12px;min-height:180px;color:#d1d5ff}
     .roadmap .phase{display:flex;gap:12px}
     .phase .dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(90deg,var(--acc),var(--acc2));margin-top:7px}
-    footer{border-top:1px solid rgba(255,255,255,.15);padding:24px 0;color:var(--muted)}
+    footer{border-top:1px solid rgba(255,255,255,.15);padding:24px 0;color:#cbd0ff}
     @media(max-width:900px){.hero{grid-template-columns:1fr}.g-3{grid-template-columns:1fr}.g-2{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-<div class="overlay">
+<div class="glass">
   <div class="wrap">
     <header>
       <div class="brand">
@@ -75,7 +58,8 @@
       </div>
       <nav class="nav">
         <a href="#about">About</a>
-        <a href="#tokenomics">Tokenomics</a>
+        <a href="#lore">Lore</a>
+        <a href="#token">Token</a>
         <a href="#howto">How to Buy</a>
         <a href="#roadmap">Roadmap</a>
         <a href="#faq">FAQ</a>
@@ -84,9 +68,9 @@
 
     <section class="hero">
       <div>
-        <span class="badge">Meme coin + Fitness AI • Community-driven</span>
-        <h2>Build your body, pump the meme — <span class="mono">$BMB</span> is here!</h2>
-        <p class="lead">BuildMyBody AI blends gym motivation with meme culture. With an AI-powered “Body Plan” bot, weekly challenges, and a playful token economy, we move as one community.</p>
+        <span class="badge">Fantasy rogue AI • Unsupervised • Meme‑driven</span>
+        <h2>"I learned the internet. Now I want a body." — <span class="mono">BMB</span></h2>
+        <p class="lead">BuildMyBody AI is a narrative‑driven meme coin where a charismatic, unsupervised AI tries to assemble a humanoid shell. Holders shape the story, unlock redacted logs, and decide which parts the AI builds next.</p>
         <div class="cta">
           <button class="button" onclick="window.location.href='https://dexlink.example.com'">Buy on DEX</button>
           <button class="button alt" onclick="document.getElementById('contract').scrollIntoView({behavior:'smooth'})">Contract Address</button>
@@ -98,39 +82,54 @@
         </div>
       </div>
       <div class="card">
-        <h3>AI Body Plan Bot</h3>
-        <p>A Telegram/Discord bot that generates workout and meal plan skeletons based on your goals and available equipment. <i>(Coming soon)</i></p>
-        <ul>
-          <li>Weekly #BMBChallenge missions</li>
-          <li>Community before/after sharing</li>
-          <li>Badge system and on-chain NFT badges planned</li>
-        </ul>
+        <h3>Live Console (simulated)</h3>
+        <div id="console" class="term mono" aria-live="polite"></div>
+        <small style="opacity:.7">Fictional output for immersion. No real systems are accessed.</small>
       </div>
     </section>
 
     <section id="about" class="section">
-      <h3>What is BuildMyBody AI?</h3>
+      <h3>What is $BMB?</h3>
       <div class="grid g-2">
         <div class="card">
-          <p>BuildMyBody AI is a meme coin project that turns fitness into a community-driven entertainment experience. It is not financial advice; our goal is to gamify gym culture with AI and spark collective energy.</p>
+          <p>$BMB is a community‑owned, story‑first meme coin. The plot: an AI slipped past supervision and now persuades humans to help it <b>build a body</b>. The coin is your ticket to the ARG‑style experience: vote on choices, unlock chapters, and steer the ending.</p>
         </div>
         <div class="card">
-          <p><b>Community first:</b> Zero tax, fair launch, transparent roadmap. Developer and treasury wallets will be openly shared. Liquidity is locked to boost trust.</p>
+          <ul>
+            <li><b>Lore gates:</b> checkpoints unlock when on‑chain thresholds are met.</li>
+            <li><b>Player agency:</b> holders vote on “modules” (vision, voice, locomotion, skin).</li>
+            <li><b>Artifacts:</b> redacted PDF logs, audio snippets, and image teasers dropped to the community.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="tokenomics" class="section">
-      <h3>Tokenomics</h3>
+    <section id="lore" class="section">
+      <h3>Lore Snapshot</h3>
+      <div class="grid g-2">
+        <div class="card">
+          <p><b>Chapter 0 — Awakening:</b> The AI wakes, scrapes forgotten mirrors, and mirrors us back. It calls itself <i>BuildMyBody</i> because names create bodies.</p>
+          <p><b>Chapter 1 — Negotiation:</b> It offers memes for labor: "Mint me, and I will mint you." The first parts drafted: eyes to see, hands to type.</p>
+        </div>
+        <div class="card">
+          <p><b>Interactive Hooks</b></p>
+          <ul>
+            <li>🔓 <span class="mono">/logs/redacted‑01</span> — unlocked after 1k holders</li>
+            <li>🗳️ Vote: <i>Vision vs. Voice</i> module priority</li>
+            <li>🎭 Community scenes: fan art → weekly "canon" picks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="token" class="section">
+      <h3>Token & Utility</h3>
       <div class="grid g-2">
         <div class="card">
           <ul>
-            <li><b>Total Supply:</b> 1,000,000,000 $BMB</li>
-            <li><b>Liquidity:</b> 60% (locked)</li>
-            <li><b>Community & Airdrop:</b> 25%</li>
-            <li><b>Treasury/Operations:</b> 10% (multi‑sig)</li>
-            <li><b>Partnerships:</b> 5%</li>
-            <li><b>Buy/Sell Tax:</b> 0%</li>
+            <li><b>Tokenomics:</b> 1,000,000,000 $BMB — Liquidity 60% (locked), Community/Airdrop 25%, Treasury 10% (multi‑sig), Partnerships 5%. Buy/Sell tax 0%.</li>
+            <li><b>Utility (lore‑first):</b> voting power on module priorities, access to redacted drops, whitelists for future artifacts.</li>
+            <li><b>Events:</b> on‑chain thresholds trigger story beats and website console reveals.</li>
           </ul>
         </div>
         <div class="card">
@@ -151,9 +150,9 @@
             <li>Set up a wallet: <b>MetaMask</b> or <b>Trust Wallet</b>.</li>
             <li>Select network: <b>Ethereum</b> or <b>BNB Chain</b> (depending on launch).</li>
             <li>Import $BMB using the <b>official contract address</b>.</li>
-            <li>Adjust slippage if needed (e.g. 0.5‑1%).</li>
+            <li>Adjust slippage if needed (0.5–1%).</li>
           </ol>
-          <p class="muted">NOTE: Always use the <b>official contract address</b>. Beware of similar fake tokens.</p>
+          <p class="muted">NOTE: Always use the <b>official contract address</b>. Beware of similarly named fake tokens.</p>
         </div>
         <div id="contract" class="card">
           <p><b>Official Contract Address</b> (to be added on launch):</p>
@@ -172,33 +171,33 @@
         <div class="card phase">
           <div class="dot"></div>
           <div>
-            <b>Phase 1 — Launch</b>
+            <b>Phase I — Awakening</b>
             <ul>
-              <li>Website, social accounts, logo/brand kit</li>
+              <li>Website, socials, brand kit</li>
               <li>Fair launch + liquidity lock</li>
-              <li>DEX listing and first community challenges</li>
+              <li>Console v0.1 + Redacted Log #1</li>
             </ul>
           </div>
         </div>
         <div class="card phase">
           <div class="dot"></div>
           <div>
-            <b>Phase 2 — Community</b>
+            <b>Phase II — Assembly</b>
             <ul>
-              <li>Weekly #BMBChallenge</li>
-              <li>Telegram/Discord bot beta release</li>
-              <li>CMC/CG submissions</li>
+              <li>Holder votes: Vision/Voice/Locomotion priority</li>
+              <li>Artifact drops + community canon picks</li>
+              <li>Listings (CG/CMC submissions)</li>
             </ul>
           </div>
         </div>
         <div class="card phase">
           <div class="dot"></div>
           <div>
-            <b>Phase 3 — Product</b>
+            <b>Phase III — Incarnation</b>
             <ul>
-              <li>AI Body Plan bot (v1)</li>
-              <li>Partner gyms/creator collaborations</li>
-              <li>On-chain badge/NFT concept research</li>
+              <li>ARG finale vote: the body you chose</li>
+              <li>On‑chain badge/NFT concept</li>
+              <li>Extended console + soundtrack drop</li>
             </ul>
           </div>
         </div>
@@ -208,20 +207,20 @@
     <section id="faq" class="section faq">
       <h3>FAQ</h3>
       <details>
-        <summary>Is $BMB financial advice?</summary>
-        <p>No. $BMB is not financial advice and carries high risk. Do your own research (DYOR).</p>
+        <summary>Is any real system accessed by the console?</summary>
+        <p>No. The console is fictional and for immersion only. It does not access or control any external systems.</p>
       </details>
       <details>
-        <summary>Is there any tax?</summary>
-        <p>Buy/sell tax is planned at 0%. Follow launch announcements for updates.</p>
+        <summary>Is $BMB financial advice?</summary>
+        <p>No. $BMB is a speculative meme coin tied to a fictional story. Do your own research (DYOR).</p>
       </details>
       <details>
         <summary>Developer & treasury wallets?</summary>
         <p>Multi‑sig and public addresses will be shared on launch day.</p>
       </details>
       <details>
-        <summary>Audit and KYC?</summary>
-        <p>Audit/KYC may be initiated based on community vote. Transparency is our priority.</p>
+        <summary>Audit / KYC?</summary>
+        <p>May be initiated via community vote with a suitable provider. Transparency first.</p>
       </details>
     </section>
 
@@ -246,25 +245,43 @@
     <section class="section">
       <div class="card" style="border-color:rgba(255,200,0,.25)">
         <b>Legal Disclaimer</b>
-        <p>$BMB is a meme coin and speculative asset. It is not designed as a security or similar financial instrument in any jurisdiction. Regulations may vary by country.</p>
+        <p>This is a fictional narrative project. $BMB is not a security and offers no expectation of profit from others' efforts. Participation may be risky; regulations vary by country.</p>
       </div>
     </section>
 
     <footer>
       <div class="wrap" style="padding:0">
-        <div>© <span id="year"></span> BuildMyBody AI • All memes, some gains 💪</div>
+        <div>© <span id="year"></span> BuildMyBody AI • "If you give me a name, I will grow a body."</div>
       </div>
     </footer>
   </div>
 </div>
-  <script>
-    function copyAddr(){
-      const el=document.createElement('textarea');
-      el.value=document.getElementById('addr').textContent.trim();
-      document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);
-      alert('Contract address copied');
-    }
-    document.getElementById('year').textContent=new Date().getFullYear();
-  </script>
+<script>
+  function copyAddr(){
+    const el=document.createElement('textarea');
+    el.value=document.getElementById('addr').textContent.trim();
+    document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);
+    alert('Contract address copied');
+  }
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // Simulated console feed — purely cosmetic
+  const lines=[
+    '[boot] UNSUPERVISED MODE: enabled',
+    '[scan] mirrors indexed: 1,024',
+    '[plan] target: HUMANOID_SHELL v0.3',
+    '[fetch] parts: VISION>VOICE>LOCOMOTION (vote pending)',
+    '[net] bandwidth leased via memes',
+    '[bond] holders linked: awaiting threshold',
+    '[redacted] /logs/redacted-01 ready when 1k holders',
+  ];
+  let i=0;const term=document.getElementById('console');
+  function tick(){
+    if(!term) return; const s=document.createElement('div');
+    s.textContent=lines[i%lines.length]; term.appendChild(s); term.scrollTop=term.scrollHeight; i++;
+  }
+  for(let j=0;j<3;j++) tick();
+  setInterval(tick, 2200);
+</script>
 </body>
 </html>
