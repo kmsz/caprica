@@ -1,21 +1,36 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BuildMyBody AI ($BMB) — Meme coin + fitness AI</title>
-  <meta name="description" content="BuildMyBody AI ($BMB) — topluluk odaklı meme coin. AI destekli vücut planı botu, haftalık fitness görevleri ve eğlenceli bir ekonomi." />
+  <title>Caprica - BuildMyBody AI ($BMB) — Meme coin</title>
+  <meta name="description" content="BuildMyBody AI ($BMB) — a community-driven meme coin with an AI-powered body plan bot, weekly fitness challenges, and a fun token economy." />
   <meta property="og:title" content="BuildMyBody AI ($BMB)" />
-  <meta property="og:description" content="Topluluk odaklı meme coin. AI vücut planı botu, görevler ve eğlenceli bir ekonomi." />
+  <meta property="og:description" content="Community-driven meme coin with AI body plan bot, weekly challenges, and a fun economy." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/social-card.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/favicon.png" />
   <style>
-    :root{--bg1:#0f1020;--bg2:#121433;--acc:#7df9ff;--acc2:#ff7dd9;--txt:#e8e8f0;--muted:#a9a9c0;}
-    html,body{margin:0;padding:0;background: radial-gradient(1200px 600px at 20% 10%, rgba(125,249,255,.08), transparent),
-    radial-gradient(1000px 500px at 80% 0%, rgba(255,125,217,.08), transparent), linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--txt);font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    :root{
+      --bg-overlay: rgba(0,0,0,0.6);
+      --acc:#7df9ff;
+      --acc2:#ff7dd9;
+      --txt:#ffffff;
+      --muted:#cccccc;
+    }
+    html,body{
+      margin:0;
+      padding:0;
+      background: var(--bg-overlay) url('d79ca1cfbf3cbe6508a16c5e402d6eba.jpg') center/cover no-repeat fixed;
+      color:var(--txt);
+      font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    }
     a{color:var(--acc)}
+    .overlay{
+      background:var(--bg-overlay);
+      min-height:100vh;
+    }
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
     .brand{display:flex;align-items:center;gap:12px}
@@ -26,11 +41,11 @@
     .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:40px 0}
     .badge{display:inline-block;border:1px solid rgba(255,255,255,.15);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
     h2{font-size:42px;line-height:1.05;margin:12px 0 10px}
-    p.lead{font-size:18px;color:#cfd1ff}
+    p.lead{font-size:18px;color:#e0e0e0}
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
     .button{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#0b0b14;border:none;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer}
     .button.alt{background:transparent;color:var(--txt);border:1px solid rgba(255,255,255,.15)}
-    .card{background:rgba(13,14,30,.5);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px}
+    .card{background:rgba(13,14,30,.6);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px}
     .grid{display:grid;gap:16px}
     .g-3{grid-template-columns:repeat(3,1fr)}
     .g-2{grid-template-columns:repeat(2,1fr)}
@@ -39,18 +54,19 @@
     .token-bar{height:12px;border-radius:999px;background:#24253f;overflow:hidden}
     .token-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--acc),var(--acc2))}
     .kpis{display:flex;gap:16px;flex-wrap:wrap}
-    .kpi{flex:1 1 180px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:16px;border-radius:12px}
+    .kpi{flex:1 1 180px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:16px;border-radius:12px}
     .kpi b{font-size:20px}
     .mono{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
-    .faq details{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:14px;border-radius:12px}
+    .faq details{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:14px;border-radius:12px}
     .faq details+details{margin-top:10px}
     .roadmap .phase{display:flex;gap:12px}
     .phase .dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(90deg,var(--acc),var(--acc2));margin-top:7px}
-    footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:var(--muted)}
+    footer{border-top:1px solid rgba(255,255,255,.15);padding:24px 0;color:var(--muted)}
     @media(max-width:900px){.hero{grid-template-columns:1fr}.g-3{grid-template-columns:1fr}.g-2{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
+<div class="overlay">
   <div class="wrap">
     <header>
       <div class="brand">
@@ -58,48 +74,48 @@
         <h1>BuildMyBody AI <span class="mono">$BMB</span></h1>
       </div>
       <nav class="nav">
-        <a href="#about">Hakkında</a>
+        <a href="#about">About</a>
         <a href="#tokenomics">Tokenomics</a>
-        <a href="#howto">Nasıl Alınır?</a>
-        <a href="#roadmap">Yol Haritası</a>
-        <a href="#faq">SSS</a>
+        <a href="#howto">How to Buy</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#faq">FAQ</a>
       </nav>
     </header>
 
     <section class="hero">
       <div>
-        <span class="badge">Meme coin + Fitness AI • Topluluk odaklı</span>
-        <h2>Vücudunu kur, memeyi parlat — <span class="mono">$BMB</span> burada!</h2>
-        <p class="lead">BuildMyBody AI, spor salonu motivasyonunu meme kültürüyle birleştirir. AI destekli “Body Plan” botu, haftalık görevler ve eğlenceli bir ekonomi ile toplulukta hareket başlatıyoruz.</p>
+        <span class="badge">Meme coin + Fitness AI • Community-driven</span>
+        <h2>Build your body, pump the meme — <span class="mono">$BMB</span> is here!</h2>
+        <p class="lead">BuildMyBody AI blends gym motivation with meme culture. With an AI-powered “Body Plan” bot, weekly challenges, and a playful token economy, we move as one community.</p>
         <div class="cta">
-          <button class="button" onclick="window.location.href='https://dexlink.example.com'">DEX'te Satın Al</button>
-          <button class="button alt" onclick="document.getElementById('contract').scrollIntoView({behavior:'smooth'})">Sözleşme Adresi</button>
+          <button class="button" onclick="window.location.href='https://dexlink.example.com'">Buy on DEX</button>
+          <button class="button alt" onclick="document.getElementById('contract').scrollIntoView({behavior:'smooth'})">Contract Address</button>
         </div>
         <div class="kpis" style="margin-top:14px">
-          <div class="kpi"><div>Toplam Arz</div><b class="mono">1,000,000,000</b></div>
-          <div class="kpi"><div>Vergi</div><b>0%</b></div>
-          <div class="kpi"><div>Likidite</div><b>%60 kilitli</b></div>
+          <div class="kpi"><div>Total Supply</div><b class="mono">1,000,000,000</b></div>
+          <div class="kpi"><div>Tax</div><b>0%</b></div>
+          <div class="kpi"><div>Liquidity</div><b>60% Locked</b></div>
         </div>
       </div>
       <div class="card">
-        <h3>AI Body Plan Botu</h3>
-        <p>Telegram/Discord botu ile basit sorulara yanıt ver: hedef kilo, ekipman, gün sayısı… Bot sana meme-enerjili bir antrenman/öğün iskeleti çıkarır. <i>(Yakında)</i></p>
+        <h3>AI Body Plan Bot</h3>
+        <p>A Telegram/Discord bot that generates workout and meal plan skeletons based on your goals and available equipment. <i>(Coming soon)</i></p>
         <ul>
-          <li>Haftalık #BMBChallenge görevleri</li>
-          <li>Toplulukla “öncesi/sonrası” paylaşımları</li>
-          <li>Görev rozetleri ve on‑chain rozet NFT planı</li>
+          <li>Weekly #BMBChallenge missions</li>
+          <li>Community before/after sharing</li>
+          <li>Badge system and on-chain NFT badges planned</li>
         </ul>
       </div>
     </section>
 
     <section id="about" class="section">
-      <h3>BuildMyBody AI nedir?</h3>
+      <h3>What is BuildMyBody AI?</h3>
       <div class="grid g-2">
         <div class="card">
-          <p>BuildMyBody AI, fitness’ı eğlence odaklı bir topluluk deneyimine çeviren bir meme coin projesidir. Finansal tavsiye vermez; amacımız spor kültürünü AI ile oyunlaştırmak ve topluluk enerjisi yaratmaktır.</p>
+          <p>BuildMyBody AI is a meme coin project that turns fitness into a community-driven entertainment experience. It is not financial advice; our goal is to gamify gym culture with AI and spark collective energy.</p>
         </div>
         <div class="card">
-          <p><b>Topluluk ilk:</b> Sıfır vergi, adil lansman, şeffaf yol haritası. Geliştirici cüzdanı ve hazine cüzdanı açık biçimde paylaşılır. Likidite kilitlemesi ile güven artırılır.</p>
+          <p><b>Community first:</b> Zero tax, fair launch, transparent roadmap. Developer and treasury wallets will be openly shared. Liquidity is locked to boost trust.</p>
         </div>
       </div>
     </section>
@@ -109,41 +125,41 @@
       <div class="grid g-2">
         <div class="card">
           <ul>
-            <li><b>Toplam Arz:</b> 1,000,000,000 $BMB</li>
-            <li><b>Likidite:</b> %60 (kilitli)</li>
-            <li><b>Topluluk & Airdrop:</b> %25</li>
-            <li><b>Hazine/Operasyon:</b> %10 (şeffaf çoklu‑imza)</li>
-            <li><b>Ortaklıklar:</b> %5</li>
-            <li><b>Alım/Satım Vergisi:</b> 0%</li>
+            <li><b>Total Supply:</b> 1,000,000,000 $BMB</li>
+            <li><b>Liquidity:</b> 60% (locked)</li>
+            <li><b>Community & Airdrop:</b> 25%</li>
+            <li><b>Treasury/Operations:</b> 10% (multi‑sig)</li>
+            <li><b>Partnerships:</b> 5%</li>
+            <li><b>Buy/Sell Tax:</b> 0%</li>
           </ul>
         </div>
         <div class="card">
-          <p><b>Dağılım Çubukları</b></p>
-          <div>Likidite %60<div class="token-bar"><span style="width:60%"></span></div></div>
-          <div style="margin-top:10px">Topluluk %25<div class="token-bar"><span style="width:25%"></span></div></div>
-          <div style="margin-top:10px">Hazine %10<div class="token-bar"><span style="width:10%"></span></div></div>
-          <div style="margin-top:10px">Ortaklık %5<div class="token-bar"><span style="width:5%"></span></div></div>
+          <p><b>Distribution Bars</b></p>
+          <div>Liquidity 60%<div class="token-bar"><span style="width:60%"></span></div></div>
+          <div style="margin-top:10px">Community 25%<div class="token-bar"><span style="width:25%"></span></div></div>
+          <div style="margin-top:10px">Treasury 10%<div class="token-bar"><span style="width:10%"></span></div></div>
+          <div style="margin-top:10px">Partnerships 5%<div class="token-bar"><span style="width:5%"></span></div></div>
         </div>
       </div>
     </section>
 
     <section id="howto" class="section">
-      <h3>Nasıl satın alınır?</h3>
+      <h3>How to Buy</h3>
       <div class="grid g-2">
         <div class="card">
           <ol>
-            <li>Cüzdan kur: <b>MetaMask</b> veya <b>Trust Wallet</b>.</li>
-            <li>Ağ seç: <b>Ethereum</b> veya <b>BNB Chain</b> (lansman ağına göre).</li>
-            <li>Borsada $BMB seç ve <b>sözleşme adresini</b> kullanarak import et.</li>
-            <li>Gerekirse kaydırma (slippage) ayarla (örn. 0.5‑1%).</li>
+            <li>Set up a wallet: <b>MetaMask</b> or <b>Trust Wallet</b>.</li>
+            <li>Select network: <b>Ethereum</b> or <b>BNB Chain</b> (depending on launch).</li>
+            <li>Import $BMB using the <b>official contract address</b>.</li>
+            <li>Adjust slippage if needed (e.g. 0.5‑1%).</li>
           </ol>
-          <p class="muted">DİKKAT: Sadece <b>resmi sözleşme adresini</b> kullan. Benzer isimli sahte token’lara dikkat.</p>
+          <p class="muted">NOTE: Always use the <b>official contract address</b>. Beware of similar fake tokens.</p>
         </div>
         <div id="contract" class="card">
-          <p><b>Resmi Sözleşme Adresi</b> (lansman günü doldurulacak):</p>
+          <p><b>Official Contract Address</b> (to be added on launch):</p>
           <code id="addr" class="mono">0xYOUR_CONTRACT_ADDRESS_TBA</code>
           <div class="cta" style="margin-top:10px">
-            <button class="button alt" onclick="copyAddr()">Kopyala</button>
+            <button class="button alt" onclick="copyAddr()">Copy</button>
             <button class="button" onclick="window.open('https://etherscan.io/address/0xYOUR_CONTRACT_ADDRESS_TBA','_blank')">Block Explorer</button>
           </div>
         </div>
@@ -151,38 +167,38 @@
     </section>
 
     <section id="roadmap" class="section roadmap">
-      <h3>Yol Haritası</h3>
+      <h3>Roadmap</h3>
       <div class="grid g-3">
         <div class="card phase">
           <div class="dot"></div>
           <div>
-            <b>Faz 1 — Lansman</b>
+            <b>Phase 1 — Launch</b>
             <ul>
-              <li>Web, sosyal hesaplar, logo/marka kiti</li>
-              <li>Adil lansman + likidite kilidi</li>
-              <li>DEX listeleme ve ilk topluluk görevleri</li>
+              <li>Website, social accounts, logo/brand kit</li>
+              <li>Fair launch + liquidity lock</li>
+              <li>DEX listing and first community challenges</li>
             </ul>
           </div>
         </div>
         <div class="card phase">
           <div class="dot"></div>
           <div>
-            <b>Faz 2 — Topluluk</b>
+            <b>Phase 2 — Community</b>
             <ul>
-              <li>Haftalık #BMBChallenge</li>
-              <li>Telegram/Discord botlarının beta sürümü</li>
-              <li>CMC/CG başvuruları</li>
+              <li>Weekly #BMBChallenge</li>
+              <li>Telegram/Discord bot beta release</li>
+              <li>CMC/CG submissions</li>
             </ul>
           </div>
         </div>
         <div class="card phase">
           <div class="dot"></div>
           <div>
-            <b>Faz 3 — Ürün</b>
+            <b>Phase 3 — Product</b>
             <ul>
-              <li>AI Body Plan botu (v1)</li>
-              <li>Partner spor salonları/creator iş birlikleri</li>
-              <li>On‑chain rozet/NFT konsepti araştırması</li>
+              <li>AI Body Plan bot (v1)</li>
+              <li>Partner gyms/creator collaborations</li>
+              <li>On-chain badge/NFT concept research</li>
             </ul>
           </div>
         </div>
@@ -190,27 +206,27 @@
     </section>
 
     <section id="faq" class="section faq">
-      <h3>Sık Sorulan Sorular</h3>
+      <h3>FAQ</h3>
       <details>
-        <summary>$BMB finansal tavsiye midir?</summary>
-        <p>Hayır. $BMB bir yatırım tavsiyesi değildir. Yüksek risk içerir. Kendi araştırmanızı yapın (DYOR).</p>
+        <summary>Is $BMB financial advice?</summary>
+        <p>No. $BMB is not financial advice and carries high risk. Do your own research (DYOR).</p>
       </details>
       <details>
-        <summary>Vergi var mı?</summary>
-        <p>Alım/satım vergisi 0% olacak şekilde planlandı. Lansman duyurusunu takip edin.</p>
+        <summary>Is there any tax?</summary>
+        <p>Buy/sell tax is planned at 0%. Follow launch announcements for updates.</p>
       </details>
       <details>
-        <summary>Geliştirici ve hazine cüzdanları?</summary>
-        <p>Çoklu‑imza ve halka açık adresler lansman gününde paylaşılacaktır.</p>
+        <summary>Developer & treasury wallets?</summary>
+        <p>Multi‑sig and public addresses will be shared on launch day.</p>
       </details>
       <details>
-        <summary>Denetim (audit) ve KYC?</summary>
-        <p>Topluluk oylaması ile uygun sağlayıcı belirlenip süreç başlatılabilir. Zorunlu değildir, şeffaflık önceliğimizdir.</p>
+        <summary>Audit and KYC?</summary>
+        <p>Audit/KYC may be initiated based on community vote. Transparency is our priority.</p>
       </details>
     </section>
 
     <section class="section">
-      <h3>Topluluk & Sosyal</h3>
+      <h3>Community & Socials</h3>
       <div class="grid g-3">
         <div class="card">
           <b>Twitter/X</b>
@@ -229,23 +245,24 @@
 
     <section class="section">
       <div class="card" style="border-color:rgba(255,200,0,.25)">
-        <b>Yasal Uyarı</b>
-        <p>$BMB bir meme coin’dir ve spekülatiftir. Hiçbir ülkede menkul kıymet veya benzeri finansal enstrüman olarak tasarlanmamıştır. Uygulanan yasalar ve kısıtlamalar ülkelere göre değişebilir.</p>
+        <b>Legal Disclaimer</b>
+        <p>$BMB is a meme coin and speculative asset. It is not designed as a security or similar financial instrument in any jurisdiction. Regulations may vary by country.</p>
       </div>
     </section>
 
     <footer>
       <div class="wrap" style="padding:0">
-        <div>© <span id="year"></span> BuildMyBody AI • Hepsi memedir, bazıları kas yapar 💪</div>
+        <div>© <span id="year"></span> BuildMyBody AI • All memes, some gains 💪</div>
       </div>
     </footer>
   </div>
+</div>
   <script>
     function copyAddr(){
       const el=document.createElement('textarea');
       el.value=document.getElementById('addr').textContent.trim();
       document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);
-      alert('Sözleşme adresi kopyalandı');
+      alert('Contract address copied');
     }
     document.getElementById('year').textContent=new Date().getFullYear();
   </script>
